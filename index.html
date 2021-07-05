@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/vendors/feather/feather.css">
     <link rel="stylesheet" href="assets/vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" >
     <!-- endinject -->
     <!-- Plugin css for this page -->
     <link rel="stylesheet" href="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
@@ -46,11 +47,20 @@
     <script src="assets/js/path.min.js"></script>
     <script src="assets/js/require.js"></script>
     
-    <script src="assets/component/nav.js"></script>
+    <script src="assets/component/min/nav.min.js"></script>
     <script src="assets/component/home.js"></script>
+    <script src="assets/component/min/trending.min.js"></script>
+    <script src="assets/component/topperson.js"></script>
+    <script src="assets/component/twittrend.js"></script>
+    <script src="assets/component/detiltwittrend.js"></script>
+
 </head>
 
 <body>
+    <div class='progress' id="progress_width">
+    <div class='bar' id='bar1'></div>
+    <div class='percent' id='percent1'></div>
+    </div>
     <div class="container-scroller">
         <!-- partial:partials/_horizontal-navbar.html -->
         <div class="horizontal-menu" id="entry-template"></div>
@@ -63,7 +73,7 @@
                 <!-- partial:partials/_footer.html -->
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © {{ date('Y') }}. All
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © {{ date }}. All
                             rights reserved.</span>
                         <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Website Dibuat dengan&nbsp;<i
                                 class="ti-heart text-danger ml-1"></i>&nbsp;Oleh Team</span>
@@ -77,7 +87,7 @@
     </div>
 
 
-    <!-- offcanvas -->
+    <!-- offcanvas (detil news)-->
     <div class="aside">
       <div class="aside-header bg-primary text-white">
         Detil News
